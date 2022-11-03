@@ -8,7 +8,7 @@
 <table>
     <!-- Docs -->
     <tr>
-        <td>Documentation</td>
+        <td>Documentação</td>
         <td>
             <a href="https://docs.julialang.org"><img src='https://img.shields.io/badge/docs-v1-blue.svg'/></a>
         </td>
@@ -17,14 +17,14 @@
     To change the badge to point to a different pipeline, it is not sufficient to simply change the `?branch=` part.
     You need to go to the Buildkite website and get the SVG URL for the correct pipeline. -->
     <tr>
-        <td>Continuous integration</td>
+        <td>Integraçao contínua</td>
         <td>
             <a href="https://buildkite.com/julialang/julia-master"><img src='https://badge.buildkite.com/f28e0d28b345f9fad5856ce6a8d64fffc7c70df8f4f2685cd8.svg?branch=master'/></a>
         </td>
     </tr>
     <!-- Coverage -->
     <tr>
-        <td>Code coverage</td>
+        <td>Cobertura do código</td>
         <td>
             <a href="https://coveralls.io/r/JuliaLang/julia?branch=master"><img src='https://img.shields.io/coveralls/github/JuliaLang/julia/master.svg?label=coveralls'/></a> <a href="https://codecov.io/github/JuliaLang/julia?branch=master"><img src='https://img.shields.io/codecov/c/github/JuliaLang/julia/master.svg?label=codecov'/></a>
         </td>
