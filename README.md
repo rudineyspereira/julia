@@ -31,13 +31,13 @@
     </tr>
 </table>
 
-## The Julia Language
+## A Linguagem Julia
 
-Julia is a high-level, high-performance dynamic language for technical
-computing.  The main homepage for Julia can be found at
-[julialang.org](https://julialang.org/).  This is the GitHub
-repository of Julia source code, including instructions for compiling
-and installing Julia, below.
+Julia é uma linguagem dinâmica de alto nível e alto desempenho para
+Informática. A página principal de Julia pode ser encontrada em
+[julialang.org](https://julialang.org/). Este é o GitHub
+repositório do código-fonte Julia, incluindo instruções para compilar
+e instalando Julia, abaixo.
 
 ## Resources
 
