@@ -42,121 +42,120 @@ e instalando Julia, abaixo.
 ## Resources
 
 - **Homepage:** <https://julialang.org>
-- **Binaries:** <https://julialang.org/downloads/>
-- **Source code:** <https://github.com/JuliaLang/julia>
-- **Documentation:** <https://docs.julialang.org>
-- **Packages:** <https://julialang.org/packages/>
-- **Discussion forum:** <https://discourse.julialang.org>
+- **Binários:** <https://julialang.org/downloads/>
+- **Código fonte:** <https://github.com/JuliaLang/julia>
+- **Documentação:** <https://docs.julialang.org>
+- **Pacotes:** <https://julialang.org/packages/>
+- **Fórum de discussão:** <https://discourse.julialang.org>
 - **Slack:** <https://julialang.slack.com> (get an invite from <https://julialang.org/slack/>)
 - **YouTube:** <https://www.youtube.com/user/JuliaLanguage>
-- **Code coverage:** <https://coveralls.io/r/JuliaLang/julia>
+- **Cobertura do código:** <https://coveralls.io/r/JuliaLang/julia>
 
-New developers may find the notes in
-[CONTRIBUTING](https://github.com/JuliaLang/julia/blob/master/CONTRIBUTING.md)
-helpful to start contributing to the Julia codebase.
+Novos desenvolvedores podem encontrar as notas em
+[CONTRIBUINDO](https://github.com/JuliaLang/julia/blob/master/CONTRIBUTING.md)
+útil para começar a contribuir para a base de código Julia.
 
-### External Resources
+### Recursos Externos
 
 - [**StackOverflow**](https://stackoverflow.com/questions/tagged/julia-lang)
 - [**Twitter**](https://twitter.com/JuliaLanguage)
 - [**Learning resources**](https://julialang.org/learning/)
 
-## Binary Installation
+## Instalação do Binário
 
-If you would rather not compile the latest Julia from source,
-platform-specific tarballs with pre-compiled binaries are also
-[available for download](https://julialang.org/downloads/). The
-downloads page also provides details on the
-[different tiers of support](https://julialang.org/downloads/#supported_platforms)
-for OS and platform combinations.
+Se você preferir não compilar a última Julia da fonte,
+tarballs específicos da plataforma com binários pré-compilados também são
+[disponível para download](https://julialang.org/downloads/). o
+página de downloads também fornece detalhes sobre o
+[diferentes níveis de suporte](https://julialang.org/downloads/#supported_platforms)
+para combinações de SO e plataforma.
 
-If everything works correctly, you will see a Julia banner and an
-interactive prompt into which you can enter expressions for
-evaluation.  You can read about [getting
-started](https://docs.julialang.org/en/v1/manual/getting-started/) in the manual.
+Se tudo funcionar corretamente, você verá um banner Julia e um
+prompt interativo no qual você pode inserir expressões para
+avaliação. Você pode ler sobre [obter
+iniciado](https://docs.julialang.org/en/v1/manual/getting-started/) no manual.
 
-**Note**: Although some system package managers provide Julia, such
-installations are neither maintained nor endorsed by the Julia
-project. They may be outdated, broken and/or unmaintained. We
-recommend you use the official Julia binaries instead.
+**Observação**: Embora alguns gerenciadores de pacotes do sistema forneçam Julia, como
+instalações não são mantidas nem endossadas pela Julia
+projeto. Eles podem estar desatualizados, quebrados e/ou sem manutenção. Nós
+recomendo que você use os binários oficiais do Julia.
 
-## Building Julia
+## Construindo Julia
 
-First, make sure you have all the [required
-dependencies](https://github.com/JuliaLang/julia/blob/master/doc/src/devdocs/build/build.md#required-build-tools-and-external-libraries) installed.
-Then, acquire the source code by cloning the git repository:
+Primeiro, certifique-se de ter todos os [requeridos
+dependências](https://github.com/JuliaLang/julia/blob/master/doc/src/devdocs/build/build.md#required-build-tools-and-external-libraries) instalado.
+Em seguida, adquira o código-fonte clonando o repositório git:
 
     git clone https://github.com/JuliaLang/julia.git
 
-and then use the command prompt to change into the resulting julia directory. By default you will be building the latest unstable version of
-Julia. However, most users should use the [most recent stable version](https://github.com/JuliaLang/julia/releases)
-of Julia. You can get this version by running:
+e, em seguida, use o prompt de comando para mudar para o diretório julia resultante. Por padrão, você estará compilando a versão instável mais recente do
+Júlia. No entanto, a maioria dos usuários deve usar a [versão estável mais recente](https://github.com/JuliaLang/julia/releases)
+de Júlia. Você pode obter esta versão executando:
 
     git checkout v1.8.2
+    
+Para construir o executável `julia`, execute `make` a partir do diretório julia.
 
-To build the `julia` executable, run `make` from within the julia directory.
+Construir Julia requer 2 GiB de espaço em disco e aproximadamente 4 GiB de memória virtual.
 
-Building Julia requires 2GiB of disk space and approximately 4GiB of virtual memory.
+**Nota:** O processo de compilação falhará muito se algum dos diretórios pai do diretório de compilação tiver espaços ou outros meta-caracteres do shell, como `$` ou `:` em seus nomes (isto é devido a uma limitação no GNU make ).
 
-**Note:** The build process will fail badly if any of the build directory's parent directories have spaces or other shell meta-characters such as `$` or `:` in their names (this is due to a limitation in GNU make).
-
-Once it is built, you can run the `julia` executable. From within the julia directory, run
+Uma vez construído, você pode executar o executável `julia`. De dentro do diretório julia, execute
 
     ./julia
 
-Your first test of Julia determines whether your build is working
-properly. From the julia
-directory, type `make testall`. You should see output that
-lists a series of running tests; if they complete without error, you
-should be in good shape to start using Julia.
+Seu primeiro teste de Julia determina se sua compilação está funcionando
+devidamente. Da julia
+diretório, digite `make testall`. Você deve ver a saída que
+lista uma série de testes em execução; se eles completarem sem erros, você
+deve estar em boa forma para começar a usar Julia.
 
-You can read about [getting
-started](https://docs.julialang.org/en/v1/manual/getting-started/)
-in the manual.
+Você pode ler sobre [obter
+iniciado](https://docs.julialang.org/en/v1/manual/getting-started/)
+no manual.
 
-Detailed build instructions, should they be necessary,
-are included in the [build documentation](https://github.com/JuliaLang/julia/blob/master/doc/src/devdocs/build/).
+Instruções detalhadas de construção, caso sejam necessárias,
+estão incluídos na [documentação de compilação](https://github.com/JuliaLang/julia/blob/master/doc/src/devdocs/build/).
 
-### Uninstalling Julia
+### Desinstalando Julia
 
-By default, Julia does not install anything outside the directory it was cloned
-into and `~/.julia`. Julia and the vast majority of Julia packages can be
-completely uninstalled by deleting these two directories.
+Por padrão, Julia não instala nada fora do diretório que foi clonado
+em e `~/.julia`. Julia e a grande maioria dos pacotes Julia podem ser
+completamente desinstalado excluindo esses dois diretórios.
 
-## Source Code Organization
+## Organização do código-fonte
 
-The Julia source code is organized as follows:
+O código fonte de Julia está organizado da seguinte forma:
+| Diretório         | Conteúdo                                                              |
+| -                 | -                                                                     |
+| `base/`           | código-fonte para o módulo Base (parte da biblioteca padrão de Julia) |
+| `stdlib/`         | código-fonte para outros pacotes de biblioteca padrão                 |
+| `cli/`            | fonte para a interface de linha de comando/REPL                       |
+| `contrib/`        | roteiros diversos                                                     |
+| `deps/`           | dependências externas                                                 |
+| `doc/src/`        | fonte para o manual do usuário                                        |
+| `src/`            | fonte para o núcleo da linguagem Julia                                |
+| `teste/`          | suítes de teste                                                       |
+| `usr/`            | binários e bibliotecas compartilhadas carregadas pelas bibliotecas    |  
+|                   | padrão de Julia                                                       |
 
-| Directory         | Contents                                                           |
-| -                 | -                                                                  |
-| `base/`           | source code for the Base module (part of Julia's standard library) |
-| `stdlib/`         | source code for other standard library packages                    |
-| `cli/`            | source for the command line interface/REPL                         |
-| `contrib/`        | miscellaneous scripts                                              |
-| `deps/`           | external dependencies                                              |
-| `doc/src/`        | source for the user manual                                         |
-| `src/`            | source for Julia language core                                     |
-| `test/`           | test suites                                                        |
-| `usr/`            | binaries and shared libraries loaded by Julia's standard libraries |
+## Terminal, Editores e IDEs
 
-## Terminal, Editors and IDEs
+O Julia REPL é bastante poderoso. Consulte a seção do manual sobre
+[a Julia REPL](https://docs.julialang.org/en/v1/stdlib/REPL/)
+para mais detalhes.
 
-The Julia REPL is quite powerful. See the section in the manual on
-[the Julia REPL](https://docs.julialang.org/en/v1/stdlib/REPL/)
-for more details.
+No Windows, recomendamos executar Julia em um terminal moderno,
+como [Windows Terminal da Microsoft Store](https://aka.ms/terminal).
 
-On Windows we highly recommend running Julia in a modern terminal,
-such as [Windows Terminal from the Microsoft Store](https://aka.ms/terminal).
-
-Support for editing Julia is available for many
-[widely used editors](https://github.com/JuliaEditorSupport):
+Suporte para edição de Julia está disponível para muitos
+[editores amplamente usados](https://github.com/JuliaEditorSupport):
 [Emacs](https://github.com/JuliaEditorSupport/julia-emacs),
 [Vim](https://github.com/JuliaEditorSupport/julia-vim),
-[Sublime Text](https://github.com/JuliaEditorSupport/Julia-sublime), and many
-others.
-
-For users who prefer IDEs, we recommend using VS Code with the
+[Sublime Text](https://github.com/JuliaEditorSupport/Julia-sublime) e muitos
+outros.
+Para usuários que preferem IDEs, recomendamos usar o VS Code com o
 [julia-vscode](https://www.julia-vscode.org/) plugin.
-For notebook users, [Jupyter](https://jupyter.org/) notebook support is available through the
-[IJulia](https://github.com/JuliaLang/IJulia.jl) package, and
-the [Pluto.jl](https://github.com/fonsp/Pluto.jl) package provides Pluto notebooks.
+Para usuários de notebooks, o suporte a notebooks [Jupyter](https://jupyter.org/) está disponível por meio do
+pacote [IJulia](https://github.com/JuliaLang/IJulia.jl) e
+o pacote [Pluto.jl](https://github.com/fonsp/Pluto.jl) fornece notebooks Pluto.
